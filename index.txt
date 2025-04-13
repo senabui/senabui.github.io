@@ -3,22 +3,22 @@ vCard - Personal Portfolio
 # sidebar
 
 alt = Richard hanrick
-Richard hanrick
-Web developer
+Sena Bui
+Data Scientist 
 
 Show Contacts
 
 Email
-richard@example.com
+sbui1@depaul.edu
 
 Phone
-+1 (213) 352-2795
++1 (916) 205-9391
 
 Birthday
-June 23, 1982
+December 26, 1997
 
 Location
-Sacramento, California, USA
+Chicago, Illinois, USA
 
 # navbar
 
