@@ -1001,6 +1001,38 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+<script>
+  // Custom script to fix tab navigation
+  document.addEventListener('DOMContentLoaded', function() {
+    // Select all navigation buttons and pages
+    const navLinks = document.querySelectorAll('[data-nav-link]');
+    const pages = document.querySelectorAll('[data-page]');
+    
+    // Add click event to each navigation button
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        // Get the button text (lowercase) - this will match the page identifier
+        const pageName = this.textContent.trim().toLowerCase();
+        
+        // Remove active class from all navigation buttons
+        navLinks.forEach(nav => nav.classList.remove('active'));
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        // Hide all pages
+        pages.forEach(page => page.classList.remove('active'));
+        
+        // Show the page that corresponds to the clicked button
+        const targetPage = document.querySelector(`[data-page="${pageName}"]`);
+        if (targetPage) {
+          targetPage.classList.add('active');
+        }
+      });
+    });
+  });
+</script>
+  
 </body>
 
 </html>
